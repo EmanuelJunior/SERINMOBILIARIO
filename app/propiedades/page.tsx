@@ -44,7 +44,7 @@ function PropiedadesContent() {
         <div
           className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] bg-cover bg-right sm:bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85')`,
+            backgroundImage: `url('/images/properties-hero-villa.jpg')`,
             maskImage:
               "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
             WebkitMaskImage:

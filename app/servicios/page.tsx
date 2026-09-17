@@ -24,7 +24,7 @@ export default function ServiciosPage() {
         <div
           className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] bg-cover bg-right sm:bg-center"
           style={{
-            backgroundImage: `url('/images/about-hero-terrace.jpg')`,
+            backgroundImage: `url('/images/services-hero-terrace.jpg')`,
             maskImage:
               "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
             WebkitMaskImage:
