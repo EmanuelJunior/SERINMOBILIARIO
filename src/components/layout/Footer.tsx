@@ -25,13 +25,13 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-forest-800/80">
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3.5">
-              <BrandLogo size="lg" />
+            <div className="flex items-center gap-3">
+              <BrandLogo size="md" />
               <div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
+                <h3 className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
                   {SITE_CONFIG.name}
                 </h3>
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-luxury text-gold-400 font-sans block font-semibold mt-0.5">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-luxury text-gold-400 font-sans block font-semibold mt-0.5">
                   {SITE_CONFIG.slogan}
                 </span>
               </div>

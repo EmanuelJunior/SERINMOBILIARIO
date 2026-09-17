@@ -11,18 +11,6 @@ export default function SectoresPage() {
 
   return (
     <div className="w-full bg-[#FAF8F5] min-h-screen relative overflow-hidden">
-      {/* Subtle Background Watermark: Palm leaves on left margin */}
-      <div
-        className="absolute left-0 top-16 w-80 h-[600px] pointer-events-none opacity-[0.04] select-none z-0"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 400 700" fill="currentColor" className="w-full h-full text-forest-950">
-          <path d="M0,100 C150,120 280,240 320,420 C240,360 140,320 0,310 Z" />
-          <path d="M0,220 C180,230 310,360 360,560 C270,490 170,450 0,440 Z" />
-          <path d="M0,350 C160,370 280,480 310,680 C230,610 130,580 0,570 Z" />
-        </svg>
-      </div>
-
       {/* 1. Panoramic Editorial Header Banner */}
       <div className="relative pt-28 sm:pt-32 pb-14 sm:pb-16 bg-[#F5F2EB] border-b border-sand-200/80 overflow-hidden">
         {/* Right Half: Panoramic Beach & Sierra Nevada Coastline of Santa Marta */}

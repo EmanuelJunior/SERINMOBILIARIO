@@ -57,39 +57,8 @@ export default function NosotrosPage() {
 
   return (
     <div className="w-full bg-[#FAF8F5] min-h-screen relative overflow-hidden">
-      {/* Decorative Palm Silhouette in Background Margins */}
-      <div
-        className="absolute left-0 top-20 w-80 h-[600px] pointer-events-none opacity-[0.04] select-none z-0"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 400 700" fill="currentColor" className="w-full h-full text-forest-950">
-          <path d="M0,100 C150,120 280,240 320,420 C240,360 140,320 0,310 Z" />
-          <path d="M0,220 C180,230 310,360 360,560 C270,490 170,450 0,440 Z" />
-          <path d="M0,350 C160,370 280,480 310,680 C230,610 130,580 0,570 Z" />
-        </svg>
-      </div>
-
-      <div
-        className="absolute right-0 top-[600px] w-80 h-[600px] pointer-events-none opacity-[0.04] select-none z-0"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 400 700" fill="currentColor" className="w-full h-full text-forest-950">
-          <path d="M400,100 C250,120 120,240 80,420 C160,360 260,320 400,310 Z" />
-          <path d="M400,220 C220,230 90,360 40,560 C130,490 230,450 400,440 Z" />
-        </svg>
-      </div>
-
       {/* 1. Header Editorial Banner */}
       <div className="relative pt-24 sm:pt-30 pb-20 sm:pb-24 bg-[#FAF8F5] border-b border-sand-200/60 overflow-hidden">
-        {/* Subtle Top-Left Tropical Palm Silhouette */}
-        <div className="absolute -top-4 -left-4 w-36 sm:w-52 h-36 sm:h-52 pointer-events-none z-10 select-none opacity-25 text-forest-950">
-          <svg viewBox="0 0 200 200" fill="currentColor" className="w-full h-full">
-            <path d="M0,0 C60,20 120,60 160,120 C130,90 80,70 0,60 Z" />
-            <path d="M0,20 C70,50 130,100 150,160 C120,120 70,100 0,90 Z" />
-            <path d="M0,40 C60,80 100,130 110,190 C90,140 50,120 0,110 Z" />
-            <path d="M20,0 C50,60 90,110 140,150 C110,110 80,70 50,0 Z" />
-          </svg>
-        </div>
 
         {/* Right Half: Crystal-Clear Coastal Panorama with Terrace Lounge */}
         <div

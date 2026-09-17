@@ -46,13 +46,13 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo & Slogan */}
-        <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+        <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group">
           <BrandLogo size="md" />
           <div className="flex flex-col">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-gold-300 transition-colors leading-tight">
+            <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-gold-300 transition-colors leading-tight">
               {SITE_CONFIG.name}
             </span>
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-luxury text-gold-400 font-sans font-semibold mt-0.5">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-luxury text-gold-400 font-sans font-semibold mt-0.5">
               {SITE_CONFIG.slogan}
             </span>
           </div>
