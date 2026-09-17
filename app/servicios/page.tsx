@@ -19,21 +19,39 @@ export default function ServiciosPage() {
   return (
     <div className="w-full bg-[#FAF8F5] min-h-screen relative overflow-hidden">
       {/* 1. Header Editorial Banner */}
-      <div className="relative pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-sand-200/70 overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(250,248,245,0.95) 0%, rgba(250,248,245,0.85) 45%, rgba(250,248,245,0.65) 100%), url('/images/about-hero-terrace.jpg')`,
-        }}
-      >
-        {/* Script Signature on the far right */}
-        <div className="absolute top-10 right-8 sm:right-16 text-right hidden lg:block pointer-events-none select-none z-10">
-          <div className="font-serif italic text-2xl sm:text-3xl text-forest-900/90 font-light drop-shadow-sm">
-            Santa Marta,
+      <div className="relative pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-sand-200/60 overflow-hidden bg-[#FAF8F5]">
+        {/* Right Half: Crystal-Clear Coastal Panorama with Terrace Lounge matching Nosotros */}
+        <div
+          className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] bg-cover bg-right sm:bg-center"
+          style={{
+            backgroundImage: `url('/images/about-hero-terrace.jpg')`,
+            maskImage:
+              "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
+          }}
+        >
+          {/* Script Signature on the far right */}
+          <div className="absolute top-6 sm:top-10 right-8 sm:right-16 text-right hidden lg:block pointer-events-none select-none z-10">
+            <div className="font-serif italic text-2xl sm:text-3xl text-gold-500 font-light drop-shadow-sm">
+              Santa Marta
+            </div>
+            <div className="font-serif italic text-xs sm:text-sm text-forest-950/80 font-light -mt-0.5">
+              más que un destino, una mejor inversión.
+            </div>
+            <div className="w-10 h-[1.5px] bg-gold-600 ml-auto mt-1" />
           </div>
-          <div className="font-serif italic text-xs sm:text-sm text-forest-950/75 font-light -mt-1">
-            más que un destino, una mejor inversión.
-          </div>
-          <div className="w-10 h-[1.5px] bg-gold-600 ml-auto mt-1" />
         </div>
+
+        {/* Bottom Right Organic Curved Swoop */}
+        <svg
+          className="absolute -bottom-0.5 right-0 w-2/5 sm:w-1/3 h-14 sm:h-18 pointer-events-none text-[#FAF8F5] z-10"
+          viewBox="0 0 500 100"
+          preserveAspectRatio="none"
+          fill="currentColor"
+        >
+          <path d="M0,100 C180,100 320,40 500,0 L500,100 Z" />
+        </svg>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* Top Badge */}

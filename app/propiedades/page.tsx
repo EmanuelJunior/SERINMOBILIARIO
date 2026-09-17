@@ -39,21 +39,21 @@ function PropiedadesContent() {
   return (
     <div className="w-full bg-[#FAF8F5] min-h-screen">
       {/* 1. Panoramic Editorial Header Banner matching the mockup */}
-      <div className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 bg-[#F5F2EB] border-b border-sand-200/80 overflow-hidden">
+      <div className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 bg-[#FAF8F5] border-b border-sand-200/60 overflow-hidden">
         {/* Right Half: Penthouse Balcony View Over Ocean & Santa Marta Coastline */}
         <div
-          className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 bg-cover bg-center"
+          className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] bg-cover bg-right sm:bg-center"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85')`,
+            maskImage:
+              "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 100%)",
           }}
         >
-          {/* Smooth Gradient blend into the light cream background on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F5F2EB] via-[#F5F2EB]/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F2EB] via-transparent to-black/10" />
-
           {/* Script Signature on the Top Right */}
-          <div className="absolute top-8 sm:top-12 right-6 sm:right-12 text-right hidden sm:block z-10">
-            <div className="font-serif italic text-2xl sm:text-3xl text-gold-500 font-light drop-shadow-sm select-none">
+          <div className="absolute top-6 sm:top-10 right-6 sm:right-16 text-right hidden sm:block z-10 pointer-events-none select-none">
+            <div className="font-serif italic text-3xl sm:text-4xl text-gold-500 font-light drop-shadow-sm">
               Santa Marta
             </div>
             <div className="flex items-center justify-end gap-2 text-forest-950/80 mt-0.5">
@@ -64,6 +64,16 @@ function PropiedadesContent() {
             </div>
           </div>
         </div>
+
+        {/* Bottom Right Organic Curved Swoop */}
+        <svg
+          className="absolute -bottom-0.5 right-0 w-2/5 sm:w-1/3 h-14 sm:h-18 pointer-events-none text-[#FAF8F5] z-10"
+          viewBox="0 0 500 100"
+          preserveAspectRatio="none"
+          fill="currentColor"
+        >
+          <path d="M0,100 C180,100 320,40 500,0 L500,100 Z" />
+        </svg>
 
         {/* Left Side: Content Container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
