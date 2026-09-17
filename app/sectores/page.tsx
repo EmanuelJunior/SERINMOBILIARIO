@@ -1,0 +1,163 @@
+import Link from "next/link";
+import { SectorService } from "@/features/sectors/services/sectorService";
+import { SectorCard } from "@/features/sectors/components/SectorCard";
+import { BarChart3 } from "lucide-react";
+import { PalmIcon, DiamondIcon } from "@/components/ui/pillar-icons";
+
+export const revalidate = 0;
+
+export default function SectoresPage() {
+  const sectors = SectorService.getAll();
+
+  return (
+    <div className="w-full bg-[#FAF8F5] min-h-screen relative overflow-hidden">
+      {/* Subtle Background Watermark: Palm leaves on left margin */}
+      <div
+        className="absolute left-0 top-16 w-80 h-[600px] pointer-events-none opacity-[0.04] select-none z-0"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 400 700" fill="currentColor" className="w-full h-full text-forest-950">
+          <path d="M0,100 C150,120 280,240 320,420 C240,360 140,320 0,310 Z" />
+          <path d="M0,220 C180,230 310,360 360,560 C270,490 170,450 0,440 Z" />
+          <path d="M0,350 C160,370 280,480 310,680 C230,610 130,580 0,570 Z" />
+        </svg>
+      </div>
+
+      {/* 1. Panoramic Editorial Header Banner */}
+      <div className="relative pt-28 sm:pt-32 pb-14 sm:pb-16 bg-[#F5F2EB] border-b border-sand-200/80 overflow-hidden">
+        {/* Right Half: Panoramic Beach & Sierra Nevada Coastline of Santa Marta */}
+        <div
+          className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85')`,
+          }}
+        >
+          {/* Smooth Gradient blend into the soft cream background on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F5F2EB] via-[#F5F2EB]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F2EB] via-transparent to-black/10" />
+
+          {/* Script Signature on the Top Right over the water & hills */}
+          <div className="absolute top-8 sm:top-12 right-6 sm:right-16 text-right hidden sm:block z-10 pointer-events-none">
+            <div className="font-serif italic text-3xl sm:text-4xl text-gold-500 font-light drop-shadow-sm select-none">
+              Santa Marta
+            </div>
+            <div className="flex items-center justify-end gap-2 text-forest-950/80 mt-1">
+              <span className="text-[10px] uppercase tracking-[0.25em] font-sans font-medium text-forest-900/90">
+                MÁS QUE UN DESTINO — UN ESTILO DE VIDA
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Left Side: Editorial Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl space-y-4">
+            {/* Pill / Eyebrow */}
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-[1.5px] bg-gold-600" />
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-gold-800 font-semibold font-sans">
+                GUÍA DE ZONAS & PLUSVALÍA
+              </span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-forest-950 tracking-tight leading-[1.08]">
+              Sectores Exclusivos
+              <br />
+              <span className="font-normal text-forest-900">de Santa Marta</span>
+            </h1>
+
+            {/* Subtitle Description with inline sector links */}
+            <p className="text-xs sm:text-sm text-sand-600 font-sans font-light leading-relaxed max-w-xl">
+              Descubre la identidad única de cada polo inmobiliario en la costa samaria. Desde la tranquilidad hotelera de{" "}
+              <Link
+                href="/sectores/bello-horizonte"
+                className="text-forest-950 font-medium underline decoration-gold-400 decoration-1 underline-offset-2 hover:text-gold-700 transition-colors"
+              >
+                Bello Horizonte
+              </Link>{" "}
+              y{" "}
+              <Link
+                href="/sectores/pozos-colorados"
+                className="text-forest-950 font-medium underline decoration-gold-400 decoration-1 underline-offset-2 hover:text-gold-700 transition-colors"
+              >
+                Pozos Colorados
+              </Link>
+              , hasta el vanguardismo de{" "}
+              <Link
+                href="/sectores/playa-salguero"
+                className="text-forest-950 font-medium underline decoration-gold-400 decoration-1 underline-offset-2 hover:text-gold-700 transition-colors"
+              >
+                Playa Salguero
+              </Link>{" "}
+              y el patrimonio histórico del Centro. Invierte en más que una propiedad: invierte en un estilo de vida.
+            </p>
+
+            {/* 3 Value Pillars in a Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-3 max-w-2xl">
+              {/* Pillar 1: ALTA PLUSVALÍA */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full border border-sand-300/80 bg-white/60 shadow-xs flex items-center justify-center shrink-0 text-gold-700">
+                  <BarChart3 className="w-4 h-4 text-gold-700" />
+                </div>
+                <div>
+                  <strong className="block text-[11px] font-serif font-bold uppercase tracking-wider text-forest-950">
+                    ALTA PLUSVALÍA
+                  </strong>
+                  <span className="text-[10px] text-sand-500 font-sans leading-tight block">
+                    Una ciudad en constante crecimiento
+                  </span>
+                </div>
+              </div>
+
+              {/* Pillar 2: ESTILO DE VIDA ÚNICO */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full border border-sand-300/80 bg-white/60 shadow-xs flex items-center justify-center shrink-0 text-gold-700">
+                  <PalmIcon className="w-4 h-4 text-gold-700" />
+                </div>
+                <div>
+                  <strong className="block text-[11px] font-serif font-bold uppercase tracking-wider text-forest-950">
+                    ESTILO DE VIDA ÚNICO
+                  </strong>
+                  <span className="text-[10px] text-sand-500 font-sans leading-tight block">
+                    Mar, naturaleza y cultura todo el año
+                  </span>
+                </div>
+              </div>
+
+              {/* Pillar 3: GRANDES OPORTUNIDADES */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full border border-sand-300/80 bg-white/60 shadow-xs flex items-center justify-center shrink-0 text-gold-700">
+                  <DiamondIcon className="w-4 h-4 text-gold-700" />
+                </div>
+                <div>
+                  <strong className="block text-[11px] font-serif font-bold uppercase tracking-wider text-forest-950">
+                    GRANDES OPORTUNIDADES
+                  </strong>
+                  <span className="text-[10px] text-sand-500 font-sans leading-tight block">
+                    Invierte hoy en el futuro del Caribe colombiano
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Sectors Grid matching mockup (3 on top row, 2 centered on bottom row) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+        <div className="flex flex-wrap justify-center gap-6">
+          {sectors.map((sector) => (
+            <div
+              key={sector.id}
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+            >
+              <SectorCard sector={sector} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
