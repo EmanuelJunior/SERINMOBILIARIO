@@ -14,9 +14,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   withGlow = true,
 }) => {
   const sizeClasses = {
-    sm: "w-8 h-8 sm:w-9 sm:h-9",
-    md: "w-10 h-10 sm:w-11 sm:h-11",
-    lg: "w-12 h-12 sm:w-14 sm:h-14",
+    sm: "w-9 h-9 sm:w-10 sm:h-10",
+    md: "w-12 h-12 sm:w-[54px] sm:h-[54px]",
+    lg: "w-14 h-14 sm:w-16 sm:h-16",
     xl: "w-16 h-16 sm:w-20 sm:h-20",
     hero: "w-20 h-20 sm:w-24 sm:h-24",
   }[size];
